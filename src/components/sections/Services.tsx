@@ -63,35 +63,39 @@ const categories = [
 
 export function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="services" className="py-24 md:py-32">
+      <div className="mx-auto max-w-5xl px-6">
         <ScrollFadeIn>
-          <div className="max-w-3xl">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              対応できること
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-gray-400">
-              「こういうの作れますか？」と聞いていただければ、
-              大抵のことは対応できます。以下は一例です。
-            </p>
-          </div>
+          <p className="font-[family-name:var(--font-inter)] text-[13px] tracking-[0.2em] text-ink-muted">
+            SERVICES
+          </p>
+          <h2 className="mt-3 font-[family-name:var(--font-noto-serif-jp)] text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+            対応できること
+          </h2>
+          <div className="section-divider mt-6" />
+          <p className="mt-6 max-w-xl text-base leading-[2] text-ink-muted">
+            「こういうの作れますか？」と聞いていただければ、
+            大抵のことは対応できます。以下は一例です。
+          </p>
         </ScrollFadeIn>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2">
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
           {categories.map((cat, i) => (
             <ScrollFadeIn key={cat.title} delay={i * 100}>
-              <div className="glass-card rounded-2xl p-8 h-full">
-                <h3 className="text-xl font-bold text-white">{cat.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-400">
+              <div className="h-full rounded-sm border border-border bg-card p-8 transition-colors hover:border-border-hover">
+                <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-lg font-medium text-ink">
+                  {cat.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-muted">
                   {cat.description}
                 </p>
-                <ul className="mt-5 space-y-2">
+                <ul className="mt-6 space-y-2.5">
                   {cat.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 text-sm text-gray-300"
+                      className="flex items-start gap-3 text-sm text-ink-light"
                     >
-                      <span className="mt-1.5 block h-1 w-1 shrink-0 rounded-full bg-blue-400" />
+                      <span className="mt-2 block h-px w-3 shrink-0 bg-accent" />
                       {item}
                     </li>
                   ))}

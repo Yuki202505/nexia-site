@@ -1,56 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-950: #0a0e1a;
-  --color-navy-900: #0f1629;
-  --color-navy-800: #162040;
-  --color-navy-700: #1e2d5a;
-  --color-navy-600: #2a3f7a;
-  --color-blue-400: #60a5fa;
-  --color-blue-500: #3b82f6;
-  --color-blue-600: #2563eb;
-  --color-purple-400: #c084fc;
-  --color-purple-500: #a855f7;
-  --color-purple-600: #9333ea;
-  --color-glass: rgba(255, 255, 255, 0.05);
-  --color-glass-border: rgba(255, 255, 255, 0.1);
-  --color-glass-hover: rgba(255, 255, 255, 0.08);
+  --color-cream: #FDFBF7;
+  --color-cream-dark: #F5F0E8;
+  --color-ink: #1A1A2E;
+  --color-ink-light: #374151;
+  --color-ink-muted: #6B7280;
+  --color-accent: #1E3A5F;
+  --color-accent-light: #2563EB;
+  --color-border: #E8E5E0;
+  --color-border-hover: #D1CCC4;
+  --color-card: #FFFFFF;
 }
 
 body {
-  background-color: #0a0e1a;
-  color: #e2e8f0;
+  background-color: #FDFBF7;
+  color: #1A1A2E;
   min-height: 100dvh;
-}
-
-/* グリッド背景パターン */
-.bg-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* グラデーションテキスト */
-.gradient-text {
-  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #60a5fa 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: shimmer 6s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 /* スクロールフェードイン */
 .fade-in-up {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .fade-in-up.visible {
@@ -58,53 +31,14 @@ body {
   transform: translateY(0);
 }
 
-/* グラスモーフィズムカード */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-}
-
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-4px);
-}
-
-/* グラデーションボーダー */
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, #3b82f6, #a855f7);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-/* グロー効果 */
-.glow {
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15), 0 0 80px rgba(168, 85, 247, 0.1);
-}
-
-/* パルスドット */
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-.animate-pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
 /* スムーズスクロール */
 html {
   scroll-behavior: smooth;
+}
+
+/* セクション区切り線 */
+.section-divider {
+  width: 48px;
+  height: 1px;
+  background-color: #1E3A5F;
 }

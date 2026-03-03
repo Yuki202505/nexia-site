@@ -1,23 +1,19 @@
-import { GradientButton } from '@/components/ui/GradientButton';
 import { ScrollFadeIn } from '@/components/ui/ScrollFadeIn';
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-grid">
-      <div className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-purple-600/20 blur-[120px]" />
-
-      <div className="relative mx-auto max-w-4xl px-6 py-32 text-center">
+    <section className="flex min-h-dvh items-center">
+      <div className="mx-auto max-w-5xl px-6 py-32">
         <ScrollFadeIn delay={100}>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="font-[family-name:var(--font-noto-serif-jp)] text-4xl font-medium leading-[1.4] tracking-tight text-ink sm:text-5xl md:text-6xl">
             テクノロジーで、
             <br />
-            <span className="gradient-text">事業を前に進める。</span>
+            事業を前に進める。
           </h1>
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={200}>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-gray-400 md:text-xl">
+          <p className="mt-8 max-w-xl text-base leading-[2] text-ink-muted md:text-lg">
             Web制作、業務自動化、AIツール開発、社員研修。
             <br className="hidden sm:block" />
             御社の「やりたいけど手が回らない」を、
@@ -27,15 +23,18 @@ export function Hero() {
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={300}>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <GradientButton href="#contact" size="lg">
-              まずは相談する
-            </GradientButton>
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <a
+              href="#contact"
+              className="inline-block rounded-sm bg-ink px-8 py-4 text-center text-sm tracking-wide text-cream transition-colors hover:bg-ink-light"
+            >
+              お問い合わせ
+            </a>
             <a
               href="#services"
-              className="inline-block rounded-lg border border-white/20 px-8 py-4 text-lg font-semibold text-white transition-all hover:border-white/40 hover:bg-white/5"
+              className="inline-block px-2 py-4 text-sm text-ink-muted underline underline-offset-4 decoration-border transition-colors hover:text-ink hover:decoration-ink"
             >
-              できること一覧
+              サービス内容を見る
             </a>
           </div>
         </ScrollFadeIn>
