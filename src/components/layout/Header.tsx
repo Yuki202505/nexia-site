@@ -26,8 +26,13 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <a href="#" className="text-lg font-bold tracking-tight text-ink">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-12">
+        <a
+          href="#"
+          className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
+            isScrolled ? 'text-ink' : 'text-white'
+          }`}
+        >
           NEXIA
         </a>
 
@@ -36,17 +41,15 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] tracking-wide text-ink-muted transition-colors hover:text-ink"
+              className={`text-[13px] tracking-wide transition-colors ${
+                isScrolled
+                  ? 'text-ink-muted hover:text-ink'
+                  : 'text-white/70 hover:text-white'
+              }`}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="rounded-full bg-ink px-5 py-2 text-[13px] text-cream transition-colors hover:bg-ink-light"
-          >
-            お問い合わせ
-          </a>
         </nav>
 
         <button
@@ -55,19 +58,19 @@ export function Header() {
           aria-label="メニュー"
         >
           <span
-            className={`h-px w-5 bg-ink transition-all duration-300 ${
-              isMobileOpen ? 'translate-y-[7px] rotate-45' : ''
-            }`}
+            className={`h-px w-5 transition-all duration-300 ${
+              isScrolled ? 'bg-ink' : 'bg-white'
+            } ${isMobileOpen ? 'translate-y-[7px] rotate-45' : ''}`}
           />
           <span
-            className={`h-px w-5 bg-ink transition-all duration-300 ${
-              isMobileOpen ? 'opacity-0' : ''
-            }`}
+            className={`h-px w-5 transition-all duration-300 ${
+              isScrolled ? 'bg-ink' : 'bg-white'
+            } ${isMobileOpen ? 'opacity-0' : ''}`}
           />
           <span
-            className={`h-px w-5 bg-ink transition-all duration-300 ${
-              isMobileOpen ? '-translate-y-[7px] -rotate-45' : ''
-            }`}
+            className={`h-px w-5 transition-all duration-300 ${
+              isScrolled ? 'bg-ink' : 'bg-white'
+            } ${isMobileOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
           />
         </button>
       </div>

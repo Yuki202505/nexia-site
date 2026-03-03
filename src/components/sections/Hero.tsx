@@ -2,48 +2,42 @@ import { ScrollFadeIn } from '@/components/ui/ScrollFadeIn';
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh items-center overflow-hidden bg-dark">
-      <div className="mx-auto max-w-6xl px-6 py-32">
-        <ScrollFadeIn delay={100}>
-          <p className="text-[13px] tracking-widest text-dark-muted">
-            AI × TECHNOLOGY PARTNER
-          </p>
-        </ScrollFadeIn>
+    <section className="relative flex min-h-dvh items-center overflow-hidden bg-dark px-6 lg:px-12">
+      {/* グリッドパターン背景 */}
+      <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      {/* ボトムのアクセントグロー */}
+      <div className="hero-glow pointer-events-none absolute inset-0" aria-hidden="true" />
 
-        <ScrollFadeIn delay={200}>
-          <h1 className="mt-6 text-4xl font-bold leading-[1.3] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            テクノロジーで、
-            <br />
-            事業を前に進める。
-          </h1>
-        </ScrollFadeIn>
-
-        <ScrollFadeIn delay={300}>
-          <p className="mt-8 max-w-lg text-[15px] leading-[1.9] text-dark-muted">
-            Web制作、業務自動化、AIツール開発、社員研修。
-            <br className="hidden sm:block" />
-            御社の「やりたいけど手が回らない」を、
-            <br className="hidden sm:block" />
-            技術の力で解決します。
-          </p>
-        </ScrollFadeIn>
-
-        <ScrollFadeIn delay={400}>
-          <div className="mt-10 flex items-center gap-6">
-            <a
-              href="#contact"
-              className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-dark transition-opacity hover:opacity-80"
+      <div className="relative mx-auto w-full max-w-[1400px] py-32">
+        <div className="max-w-4xl">
+          <ScrollFadeIn delay={100}>
+            <h1
+              className="font-bold leading-[1.1] tracking-tight text-white"
+              style={{ fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', letterSpacing: '-0.02em' }}
             >
-              お問い合わせ
-            </a>
-            <a
-              href="#services"
-              className="text-sm text-dark-muted underline underline-offset-4 decoration-dark-muted/40 transition-colors hover:text-white hover:decoration-white/40"
-            >
-              サービス内容を見る
-            </a>
-          </div>
-        </ScrollFadeIn>
+              テクノロジーで、
+              <br />
+              事業を前に進める。
+            </h1>
+          </ScrollFadeIn>
+
+          <ScrollFadeIn delay={200}>
+            <p className="mt-6 text-lg font-medium tracking-[0.2em] text-ink-muted md:text-xl">
+              AI × TECHNOLOGY PARTNER
+            </p>
+          </ScrollFadeIn>
+
+          <ScrollFadeIn delay={300}>
+            <div className="mt-12">
+              <a
+                href="#contact"
+                className="inline-block rounded-full bg-ink px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:bg-accent"
+              >
+                お問い合わせ
+              </a>
+            </div>
+          </ScrollFadeIn>
+        </div>
       </div>
     </section>
   );

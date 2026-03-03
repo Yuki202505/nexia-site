@@ -3,28 +3,32 @@
 import { useState } from 'react';
 import { ScrollFadeIn } from '@/components/ui/ScrollFadeIn';
 
+const inputClass =
+  'w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-accent';
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section id="contact" className="py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="contact" className="bg-cream px-6 py-24 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-[1400px]">
         <ScrollFadeIn>
-          <p className="text-[13px] tracking-widest text-ink-muted">
-            CONTACT
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-            お問い合わせ
-          </h2>
-          <p className="mt-6 max-w-lg text-[15px] leading-[1.9] text-ink-muted">
-            「こんなこと頼める？」くらいのご相談で大丈夫です。
-            通常1営業日以内にご返信します。
-          </p>
+          <div className="mb-16">
+            <h2
+              className="text-4xl font-bold text-ink md:text-5xl"
+              style={{ letterSpacing: '-0.02em' }}
+            >
+              Contact
+            </h2>
+            <p className="mt-4 text-base text-ink-muted md:text-lg">
+              お問い合わせ
+            </p>
+          </div>
         </ScrollFadeIn>
 
         <ScrollFadeIn delay={200}>
           {submitted ? (
-            <div className="mt-12 rounded-lg border border-border bg-card p-12 text-center">
+            <div className="max-w-2xl rounded-lg border border-border bg-white p-12 text-center">
               <h3 className="text-xl font-semibold text-ink">
                 お問い合わせありがとうございます
               </h3>
@@ -37,11 +41,11 @@ export function Contact() {
               action="https://formspree.io/f/xpwzgkvl"
               method="POST"
               onSubmit={() => setSubmitted(true)}
-              className="mt-12 max-w-2xl"
+              className="max-w-2xl space-y-6"
             >
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-ink-muted">
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-ink">
                     お名前 <span className="text-accent">*</span>
                   </label>
                   <input
@@ -49,70 +53,71 @@ export function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="mt-2 w-full border-b border-border bg-transparent px-0 py-3 text-sm text-ink outline-none transition-colors focus:border-ink"
-                    placeholder="山田 太郎"
+                    className={inputClass}
+                    placeholder="山田太郎"
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm text-ink-muted">
-                    会社名
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-ink">
+                    メールアドレス <span className="text-accent">*</span>
                   </label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="mt-2 w-full border-b border-border bg-transparent px-0 py-3 text-sm text-ink outline-none transition-colors focus:border-ink"
-                    placeholder="株式会社○○"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className={inputClass}
+                    placeholder="example@company.com"
                   />
                 </div>
               </div>
-              <div className="mt-8">
-                <label htmlFor="email" className="block text-sm text-ink-muted">
-                  メールアドレス <span className="text-accent">*</span>
+              <div>
+                <label htmlFor="company" className="mb-2 block text-sm font-medium text-ink">
+                  会社名
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="mt-2 w-full border-b border-border bg-transparent px-0 py-3 text-sm text-ink outline-none transition-colors focus:border-ink"
-                  placeholder="taro@example.com"
+                  type="text"
+                  id="company"
+                  name="company"
+                  className={inputClass}
+                  placeholder="株式会社○○"
                 />
               </div>
-              <div className="mt-8">
-                <label htmlFor="service" className="block text-sm text-ink-muted">
-                  ご興味のあるサービス
+              <div>
+                <label htmlFor="service" className="mb-2 block text-sm font-medium text-ink">
+                  ご希望のサービス <span className="text-accent">*</span>
                 </label>
                 <select
                   id="service"
                   name="service"
-                  className="mt-2 w-full border-b border-border bg-transparent px-0 py-3 text-sm text-ink outline-none transition-colors focus:border-ink"
+                  required
+                  className={inputClass + ' appearance-none'}
                 >
                   <option value="">選択してください</option>
                   <option value="web">Web制作・開発</option>
                   <option value="ai-tool">AI・自動化ツール開発</option>
                   <option value="marketing">マーケティング・営業支援</option>
                   <option value="training">AI研修・コンサルティング</option>
-                  <option value="other">その他・よくわからないけど相談したい</option>
+                  <option value="other">その他</option>
                 </select>
               </div>
-              <div className="mt-8">
-                <label htmlFor="message" className="block text-sm text-ink-muted">
+              <div>
+                <label htmlFor="message" className="mb-2 block text-sm font-medium text-ink">
                   お問い合わせ内容 <span className="text-accent">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={6}
                   required
-                  className="mt-2 w-full resize-none border-b border-border bg-transparent px-0 py-3 text-sm text-ink outline-none transition-colors focus:border-ink"
-                  placeholder="ご相談内容をお気軽にご記入ください"
+                  className={inputClass + ' resize-none'}
+                  placeholder="お問い合わせ内容をご記入ください"
                 />
               </div>
-              <div className="mt-10">
+              <div>
                 <button
                   type="submit"
-                  className="rounded-full bg-ink px-8 py-3.5 text-sm text-cream transition-colors hover:bg-ink-light"
+                  className="rounded-full bg-ink px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:bg-accent"
                 >
                   送信する
                 </button>

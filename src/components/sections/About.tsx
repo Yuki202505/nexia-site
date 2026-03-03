@@ -1,58 +1,45 @@
 import { ScrollFadeIn } from '@/components/ui/ScrollFadeIn';
 
+const companyInfo = [
+  { label: '屋号', value: 'NEXIA' },
+  { label: '事業内容', value: 'AI技術コンサルティング、Web制作・開発、マーケティング支援、AI研修' },
+  { label: '対応エリア', value: '全国（オンライン対応可）' },
+  { label: '連絡方法', value: 'メール / Zoom / Google Meet' },
+];
+
 export function About() {
   return (
-    <section id="about" className="bg-dark py-24 text-white md:py-32">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="about" className="relative overflow-hidden bg-dark px-6 py-24 lg:px-12 lg:py-32">
+      <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      <div className="relative mx-auto max-w-[1400px]">
         <ScrollFadeIn>
-          <p className="text-[13px] tracking-widest text-dark-muted">
-            ABOUT
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-            NEXIAについて
-          </h2>
+          <div className="mb-16">
+            <h2
+              className="text-4xl font-bold text-white md:text-5xl"
+              style={{ letterSpacing: '-0.02em' }}
+            >
+              About
+            </h2>
+            <p className="mt-4 text-base text-ink-muted md:text-lg">
+              会社情報
+            </p>
+          </div>
         </ScrollFadeIn>
 
-        <div className="mt-16 grid gap-16 md:grid-cols-2">
-          <ScrollFadeIn delay={100}>
-            <div className="space-y-6 text-[15px] leading-[1.9] text-dark-muted">
-              <p>
-                NEXIAは、Web制作とAI技術を軸に、企業の業務改善・デジタル化を支援しています。
-              </p>
-              <p>
-                大手企業だけが使えるような技術を、中小企業や個人事業主にも届けたい。
-                そんな想いで、ひとつひとつの案件に向き合っています。
-              </p>
-              <p>
-                「こんなことできる？」というご相談から始まることがほとんどです。
-                まずはお気軽にお問い合わせください。
-              </p>
-            </div>
-          </ScrollFadeIn>
-
-          <ScrollFadeIn delay={200}>
-            <dl className="divide-y divide-white/10">
-              <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
-                <dt className="w-32 shrink-0 text-sm text-dark-muted">屋号</dt>
-                <dd className="text-sm text-white">NEXIA</dd>
-              </div>
-              <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
-                <dt className="w-32 shrink-0 text-sm text-dark-muted">事業内容</dt>
-                <dd className="text-sm text-white">
-                  Web制作 / AIツール開発 / 業務自動化 / AI研修
+        <ScrollFadeIn delay={150}>
+          <div className="grid max-w-5xl grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+            {companyInfo.map((info) => (
+              <div key={info.label} className="space-y-3">
+                <dt className="text-sm font-medium uppercase tracking-wider text-ink-muted">
+                  {info.label}
+                </dt>
+                <dd className="text-lg text-white">
+                  {info.value}
                 </dd>
               </div>
-              <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
-                <dt className="w-32 shrink-0 text-sm text-dark-muted">対応エリア</dt>
-                <dd className="text-sm text-white">全国対応（フルリモート）</dd>
-              </div>
-              <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
-                <dt className="w-32 shrink-0 text-sm text-dark-muted">連絡方法</dt>
-                <dd className="text-sm text-white">メール / Zoom / Google Meet</dd>
-              </div>
-            </dl>
-          </ScrollFadeIn>
-        </div>
+            ))}
+          </div>
+        </ScrollFadeIn>
       </div>
     </section>
   );
