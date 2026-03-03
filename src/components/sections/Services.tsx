@@ -48,7 +48,7 @@ export function Services() {
         <div className="divide-y divide-border">
           {services.map((s, i) => (
             <ScrollFadeIn key={s.title} delay={i * 80}>
-              <div className="grid gap-4 py-10 md:grid-cols-12 md:gap-8 md:py-12">
+              <div className="service-item grid gap-4 rounded-lg py-10 md:grid-cols-12 md:gap-8 md:py-12">
                 <div className="md:col-span-1">
                   <span className="text-lg font-bold tabular-nums text-accent">
                     {s.num}

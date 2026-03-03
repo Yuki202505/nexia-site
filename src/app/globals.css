@@ -37,15 +37,77 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero背景グリッドパターン */
+/* ===== Hero背景アニメーション ===== */
+
+/* グリッドパターン */
 .hero-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
-/* Hero背景ラジアルグロー */
-.hero-glow {
-  background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 85, 255, 0.15) 0%, transparent 60%);
+/* アニメーションするグラデーションオーブ */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  will-change: transform;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 85, 255, 0.25) 0%, transparent 70%);
+  top: 10%;
+  right: -10%;
+  animation: orb-float-1 20s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(100, 60, 255, 0.2) 0%, transparent 70%);
+  bottom: -5%;
+  left: -5%;
+  animation: orb-float-2 25s ease-in-out infinite;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.15) 0%, transparent 70%);
+  top: 50%;
+  left: 40%;
+  animation: orb-float-3 18s ease-in-out infinite;
+}
+
+@keyframes orb-float-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-80px, 60px) scale(1.1); }
+  50% { transform: translate(-40px, -40px) scale(0.95); }
+  75% { transform: translate(60px, 30px) scale(1.05); }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(60px, -50px) scale(1.05); }
+  50% { transform: translate(100px, 20px) scale(1.1); }
+  75% { transform: translate(30px, -30px) scale(0.95); }
+}
+
+@keyframes orb-float-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-70px, -60px) scale(1.08); }
+  66% { transform: translate(50px, 40px) scale(0.92); }
+}
+
+/* サービスアイテムのホバーエフェクト */
+.service-item {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-item:hover {
+  background-color: rgba(0, 85, 255, 0.03);
+  transform: translateX(4px);
 }
