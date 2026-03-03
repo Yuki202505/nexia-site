@@ -14,59 +14,44 @@ export function About() {
           <div className="section-divider mt-6" />
         </ScrollFadeIn>
 
-        <div className="mt-16 grid items-start gap-16 md:grid-cols-5">
-          <ScrollFadeIn>
-            <div className="md:col-span-3">
-              <div className="space-y-6 text-base leading-[2] text-ink-muted">
-                <p>
-                  NEXIAは、Web制作とAI技術を軸に、企業の業務改善・デジタル化を支援しています。
-                </p>
-                <p>
-                  大手企業だけが使えるような技術を、中小企業や個人事業主にも届けたい。
-                  そんな想いで、ひとつひとつの案件に向き合っています。
-                </p>
-                <p>
-                  「こんなことできる？」というご相談から始まることがほとんどです。
-                  まずはお気軽にお問い合わせください。
-                </p>
-              </div>
-            </div>
-          </ScrollFadeIn>
+        <ScrollFadeIn delay={100}>
+          <div className="mt-16 max-w-2xl space-y-6 text-base leading-[2] text-ink-muted">
+            <p>
+              NEXIAは、Web制作とAI技術を軸に、企業の業務改善・デジタル化を支援しています。
+            </p>
+            <p>
+              大手企業だけが使えるような技術を、中小企業や個人事業主にも届けたい。
+              そんな想いで、ひとつひとつの案件に向き合っています。
+            </p>
+            <p>
+              「こんなことできる？」というご相談から始まることがほとんどです。
+              まずはお気軽にお問い合わせください。
+            </p>
+          </div>
+        </ScrollFadeIn>
 
-          <ScrollFadeIn delay={200}>
-            <div className="md:col-span-2">
-              <div className="rounded-sm border border-border bg-card p-8">
-                <h3 className="font-[family-name:var(--font-noto-serif-jp)] text-sm font-medium tracking-wide text-ink">
-                  基本情報
-                </h3>
-                <dl className="mt-6 space-y-5 text-sm">
-                  <div className="border-b border-border pb-4">
-                    <dt className="text-ink-muted">屋号</dt>
-                    <dd className="mt-1 text-ink">NEXIA</dd>
-                  </div>
-                  <div className="border-b border-border pb-4">
-                    <dt className="text-ink-muted">事業内容</dt>
-                    <dd className="mt-1 text-ink">
-                      Web制作 / AIツール開発 / 業務自動化 / AI研修
-                    </dd>
-                  </div>
-                  <div className="border-b border-border pb-4">
-                    <dt className="text-ink-muted">対応エリア</dt>
-                    <dd className="mt-1 text-ink">
-                      全国対応（フルリモート）
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-ink-muted">連絡方法</dt>
-                    <dd className="mt-1 text-ink">
-                      メール / Zoom / Google Meet
-                    </dd>
-                  </div>
-                </dl>
-              </div>
+        <ScrollFadeIn delay={200}>
+          <dl className="mt-16 max-w-2xl divide-y divide-border">
+            <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
+              <dt className="w-40 shrink-0 text-sm text-ink-muted">屋号</dt>
+              <dd className="text-sm text-ink">NEXIA</dd>
             </div>
-          </ScrollFadeIn>
-        </div>
+            <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
+              <dt className="w-40 shrink-0 text-sm text-ink-muted">事業内容</dt>
+              <dd className="text-sm text-ink">
+                Web制作 / AIツール開発 / 業務自動化 / AI研修
+              </dd>
+            </div>
+            <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
+              <dt className="w-40 shrink-0 text-sm text-ink-muted">対応エリア</dt>
+              <dd className="text-sm text-ink">全国対応（フルリモート）</dd>
+            </div>
+            <div className="flex flex-col gap-1 py-5 sm:flex-row sm:gap-0">
+              <dt className="w-40 shrink-0 text-sm text-ink-muted">連絡方法</dt>
+              <dd className="text-sm text-ink">メール / Zoom / Google Meet</dd>
+            </div>
+          </dl>
+        </ScrollFadeIn>
       </div>
     </section>
   );
