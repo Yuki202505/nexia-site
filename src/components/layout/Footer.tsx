@@ -8,15 +8,12 @@ export function Footer() {
               <span className="gradient-text">NEXIA</span>
             </span>
             <p className="mt-2 text-sm text-gray-500">
-              AIで、ビジネスを次のステージへ。
+              テクノロジーで、事業を前に進める。
             </p>
           </div>
           <nav className="flex gap-6 text-sm text-gray-500">
             <a href="#services" className="transition-colors hover:text-gray-300">
-              サービス
-            </a>
-            <a href="#pricing" className="transition-colors hover:text-gray-300">
-              料金
+              できること
             </a>
             <a href="#about" className="transition-colors hover:text-gray-300">
               会社概要

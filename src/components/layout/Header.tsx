@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { href: '#services', label: 'サービス' },
-  { href: '#pricing', label: '料金' },
+  { href: '#services', label: 'できること' },
   { href: '#about', label: '会社概要' },
   { href: '#contact', label: 'お問い合わせ' },
 ];

@@ -21,9 +21,9 @@ export function Contact() {
               <span className="gradient-text">お問い合わせ</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-gray-400">
-              サービスに関するご質問・ご相談はお気軽にどうぞ。
+              「こんなこと頼める？」くらいのご相談で大丈夫です。
               <br />
-              通常1営業日以内にご返信いたします。
+              通常1営業日以内にご返信します。
             </p>
           </div>
         </ScrollFadeIn>
@@ -31,7 +31,7 @@ export function Contact() {
         <ScrollFadeIn delay={200}>
           {submitted ? (
             <div className="mt-12 glass-card rounded-2xl p-12 text-center">
-              <div className="text-4xl">✉️</div>
+              <div className="text-4xl">&#9993;</div>
               <h3 className="mt-4 text-xl font-bold">
                 お問い合わせありがとうございます
               </h3>
@@ -108,10 +108,11 @@ export function Contact() {
                   className="mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-colors focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 >
                   <option value="" className="bg-navy-900">選択してください</option>
-                  <option value="hp" className="bg-navy-900">HP制作</option>
-                  <option value="tool" className="bg-navy-900">AIツール開発</option>
-                  <option value="training" className="bg-navy-900">AI研修</option>
-                  <option value="other" className="bg-navy-900">その他</option>
+                  <option value="web" className="bg-navy-900">Web制作・開発</option>
+                  <option value="ai-tool" className="bg-navy-900">AI・自動化ツール開発</option>
+                  <option value="marketing" className="bg-navy-900">マーケティング・営業支援</option>
+                  <option value="training" className="bg-navy-900">AI研修・コンサルティング</option>
+                  <option value="other" className="bg-navy-900">その他・よくわからないけど相談したい</option>
                 </select>
               </div>
               <div className="mt-6">
