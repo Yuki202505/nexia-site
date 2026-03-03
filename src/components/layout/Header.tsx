@@ -26,29 +26,26 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
-        <a
-          href="#"
-          className="font-[family-name:var(--font-noto-serif-jp)] text-xl font-semibold tracking-wide text-ink"
-        >
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <a href="#" className="text-lg font-bold tracking-tight text-ink">
           NEXIA
         </a>
 
-        <nav className="hidden items-center gap-10 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="font-[family-name:var(--font-inter)] text-[13px] tracking-widest text-ink-muted transition-colors hover:text-ink"
+              className="text-[13px] tracking-wide text-ink-muted transition-colors hover:text-ink"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-sm bg-ink px-5 py-2.5 font-[family-name:var(--font-inter)] text-[13px] tracking-wide text-cream transition-colors hover:bg-ink-light"
+            className="rounded-full bg-ink px-5 py-2 text-[13px] text-cream transition-colors hover:bg-ink-light"
           >
-            Contact
+            お問い合わせ
           </a>
         </nav>
 
@@ -58,17 +55,17 @@ export function Header() {
           aria-label="メニュー"
         >
           <span
-            className={`h-px w-6 bg-ink transition-all duration-300 ${
+            className={`h-px w-5 bg-ink transition-all duration-300 ${
               isMobileOpen ? 'translate-y-[7px] rotate-45' : ''
             }`}
           />
           <span
-            className={`h-px w-6 bg-ink transition-all duration-300 ${
+            className={`h-px w-5 bg-ink transition-all duration-300 ${
               isMobileOpen ? 'opacity-0' : ''
             }`}
           />
           <span
-            className={`h-px w-6 bg-ink transition-all duration-300 ${
+            className={`h-px w-5 bg-ink transition-all duration-300 ${
               isMobileOpen ? '-translate-y-[7px] -rotate-45' : ''
             }`}
           />
@@ -86,7 +83,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileOpen(false)}
-              className="font-[family-name:var(--font-inter)] text-sm tracking-widest text-ink-muted transition-colors hover:text-ink"
+              className="text-sm text-ink-muted transition-colors hover:text-ink"
             >
               {link.label}
             </a>

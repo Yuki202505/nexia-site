@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FDFBF7;
-  --color-cream-dark: #F5F0E8;
-  --color-ink: #1A1A2E;
-  --color-ink-light: #374151;
-  --color-ink-muted: #6B7280;
-  --color-accent: #1E3A5F;
-  --color-accent-light: #2563EB;
-  --color-border: #E8E5E0;
-  --color-border-hover: #D1CCC4;
+  --color-cream: #FAFAFA;
+  --color-cream-dark: #F0F0F0;
+  --color-ink: #111111;
+  --color-ink-light: #333333;
+  --color-ink-muted: #777777;
+  --color-accent: #0055FF;
+  --color-border: #E0E0E0;
+  --color-border-hover: #CCCCCC;
   --color-card: #FFFFFF;
+  --color-dark: #0A0A0A;
+  --color-dark-muted: #999999;
 }
 
 body {
-  background-color: #FDFBF7;
-  color: #1A1A2E;
+  background-color: #FAFAFA;
+  color: #111111;
   min-height: 100dvh;
 }
 
@@ -34,11 +35,4 @@ body {
 /* スムーズスクロール */
 html {
   scroll-behavior: smooth;
-}
-
-/* セクション区切り線 */
-.section-divider {
-  width: 48px;
-  height: 1px;
-  background-color: #1E3A5F;
 }

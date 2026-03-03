@@ -1,21 +1,8 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_JP, Noto_Serif_JP, Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-
-const notoSansJP = Noto_Sans_JP({
-  subsets: ['latin'],
-  variable: '--font-noto-sans-jp',
-  display: 'swap',
-});
-
-const notoSerifJP = Noto_Serif_JP({
-  subsets: ['latin'],
-  variable: '--font-noto-serif-jp',
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
 
 const inter = Inter({
   subsets: ['latin'],
@@ -43,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body
-        className={`${notoSansJP.variable} ${notoSerifJP.variable} ${inter.variable} font-[family-name:var(--font-noto-sans-jp)] antialiased`}
+        className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}
       >
         <Header />
         <main>{children}</main>

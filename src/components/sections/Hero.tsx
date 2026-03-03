@@ -2,18 +2,24 @@ import { ScrollFadeIn } from '@/components/ui/ScrollFadeIn';
 
 export function Hero() {
   return (
-    <section className="flex min-h-dvh items-center">
-      <div className="mx-auto max-w-5xl px-6 py-32">
+    <section className="relative flex min-h-dvh items-center overflow-hidden bg-dark">
+      <div className="mx-auto max-w-6xl px-6 py-32">
         <ScrollFadeIn delay={100}>
-          <h1 className="font-[family-name:var(--font-noto-serif-jp)] text-4xl font-medium leading-[1.4] tracking-tight text-ink sm:text-5xl md:text-6xl">
+          <p className="text-[13px] tracking-widest text-dark-muted">
+            AI × TECHNOLOGY PARTNER
+          </p>
+        </ScrollFadeIn>
+
+        <ScrollFadeIn delay={200}>
+          <h1 className="mt-6 text-4xl font-bold leading-[1.3] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             テクノロジーで、
             <br />
             事業を前に進める。
           </h1>
         </ScrollFadeIn>
 
-        <ScrollFadeIn delay={200}>
-          <p className="mt-8 max-w-xl text-base leading-[2] text-ink-muted md:text-lg">
+        <ScrollFadeIn delay={300}>
+          <p className="mt-8 max-w-lg text-[15px] leading-[1.9] text-dark-muted">
             Web制作、業務自動化、AIツール開発、社員研修。
             <br className="hidden sm:block" />
             御社の「やりたいけど手が回らない」を、
@@ -22,17 +28,17 @@ export function Hero() {
           </p>
         </ScrollFadeIn>
 
-        <ScrollFadeIn delay={300}>
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <ScrollFadeIn delay={400}>
+          <div className="mt-10 flex items-center gap-6">
             <a
               href="#contact"
-              className="inline-block rounded-sm bg-ink px-8 py-4 text-center text-sm tracking-wide text-cream transition-colors hover:bg-ink-light"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-medium text-dark transition-opacity hover:opacity-80"
             >
               お問い合わせ
             </a>
             <a
               href="#services"
-              className="inline-block px-2 py-4 text-sm text-ink-muted underline underline-offset-4 decoration-border transition-colors hover:text-ink hover:decoration-ink"
+              className="text-sm text-dark-muted underline underline-offset-4 decoration-dark-muted/40 transition-colors hover:text-white hover:decoration-white/40"
             >
               サービス内容を見る
             </a>
