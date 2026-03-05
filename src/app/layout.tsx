@@ -19,13 +19,13 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'NEXIA | テクノロジーで、事業を前に進める。',
+  title: 'NEXIA',
   description:
     'NEXIAはWeb制作・AIツール開発・業務自動化・AI研修を通じて、企業のデジタル化を支援します。',
   openGraph: {
-    title: 'NEXIA | テクノロジーで、事業を前に進める。',
+    title: 'NEXIA',
     description:
-      'Web制作・AIツール開発・業務自動化・AI研修。テクノロジーの力で御社の事業課題を解決します。',
+      'Web制作・AIツール開発・業務自動化・AI研修。テクノロジーの力で事業課題を解決します。',
     type: 'website',
   },
 };

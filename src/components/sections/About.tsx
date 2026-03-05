@@ -145,7 +145,7 @@ export function About() {
             className="gsap-hidden text-base sm:text-lg text-white/40 max-w-xl mx-auto"
             style={{ transform: 'translateY(20px)' }}
           >
-            大手にはないスピード感と柔軟さで、御社の課題に向き合います。
+            大手にはないスピード感と柔軟さで、お客様の課題に向き合います。
           </p>
         </div>
 

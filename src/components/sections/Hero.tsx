@@ -119,7 +119,7 @@ export function Hero() {
           className="text-5xl sm:text-6xl lg:text-[5rem] font-bold leading-[1.1] tracking-tight mb-8"
           style={{ perspective: '800px' }}
         >
-          御社の「作りたい」を
+          「作りたい」を
           <br />
           カタチにする。
         </h1>
@@ -132,7 +132,7 @@ export function Hero() {
         >
           ホームページ制作・AIツール開発・業務自動化。
           <br className="hidden sm:block" />
-          企画から運用まで、ワンストップで御社のDXを支援します。
+          企画から運用まで、ワンストップでDXを支援します。
         </p>
 
         {/* CTAボタン — Strat Studio風の大きなpill */}
