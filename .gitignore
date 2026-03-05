@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# unused video assets
+/public/ai-bg.mp4
+/public/ai-neural-v2.mp4
+/public/earth-bg.mp4
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
