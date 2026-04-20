@@ -4,11 +4,10 @@ import { useState } from 'react';
 import sec from './section.module.css';
 import styles from './Contact.module.css';
 
-// TODO(nexia): Contact info-grid の値は variant-b 原稿のダミー。実値に差し替え必要。
+// TODO(nexia): OFFICE住所は登記住所へ差し替え必要。
 const INFO = [
   { k: 'TEL', v: '03-0000-0000', vSub: '平日 10:00-18:00' },
-  { k: 'MAIL', v: 'hello@nexia-ai.jp', vSub: '' },
-  { k: 'OFFICE', v: '東京都千代田区', vSub: '●●●● 8F' },
+  { k: 'OFFICE', v: '大阪府', vSub: '（詳細は会社概要）' },
   { k: 'HOURS', v: 'Mon-Fri', vSub: '10:00-19:00 JST' },
 ];
 
@@ -29,7 +28,7 @@ export function Contact() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>04</span>
+            <span className={sec.secTagNum}>05</span>
             <span>Contact</span>
             <span className={sec.jaSub}>お問い合わせ</span>
           </div>

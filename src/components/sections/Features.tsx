@@ -13,8 +13,6 @@ type Cell = {
   todo?: string;
 };
 
-// TODO(nexia): F.02 の本文は variant-b 原稿の「短くで08日から。」が破綻していたため暫定修正。
-// 期間は実コースに合わせて要調整。
 const FEATURES: Cell[] = [
   {
     num: 'F.01',
@@ -26,14 +24,13 @@ const FEATURES: Cell[] = [
   {
     num: 'F.02',
     title: '短期間で完了',
-    body: '最短8日から。忙しい業務を止めずに、最短距離で身につくカリキュラム。',
+    body: '量を求めずに、最短距離で身につくカリキュラム。研修1日から。',
     variant: 'circ',
-    todo: 'F.02: 最短日数の実値を要確認',
   },
   {
     num: 'F.03',
-    title: '業界最安水準の価格',
-    body: '同等品質の研修の約1/2価格。中小企業・個人受講も無理なく。',
+    title: '業界最安値水準',
+    body: '研修内容に見合った価格で、質を落とさず提供します。',
     variant: 'diag',
   },
   {
@@ -76,9 +73,9 @@ export function Features() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>01</span>
-            <span>Why Nexia</span>
-            <span className={sec.jaSub}>NEXIAが選ばれる理由</span>
+            <span className={sec.secTagNum}>02</span>
+            <span>AI Training</span>
+            <span className={sec.jaSub}>AI研修の特徴</span>
           </div>
           <h2>
             AIを道具から<span className="accent" style={{ color: 'var(--color-accent)' }}>同僚</span>にするための、
@@ -88,7 +85,7 @@ export function Features() {
           <div className={sec.metaRight}>
             基礎を丁寧に、その上で実務へ。
             <br />
-            短期間・低価格で、趣旨に絞ったカリキュラム。
+            短期間・業界最安値水準で、実務に絞ったカリキュラム。
           </div>
         </div>
 

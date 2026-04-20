@@ -43,7 +43,7 @@ export function FAQ() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>03</span>
+            <span className={sec.secTagNum}>04</span>
             <span>FAQ</span>
             <span className={sec.jaSub}>よくある質問</span>
           </div>

@@ -1,9 +1,10 @@
 import styles from './NexiaNav.module.css';
 
 const LINKS = [
-  { href: '#features', label: '特徴' },
-  { href: '#programs', label: 'プログラム' },
+  { href: '#services', label: '事業領域' },
+  { href: '#features', label: 'AI研修' },
   { href: '#faq', label: 'よくある質問' },
+  { href: '#company', label: '会社概要' },
   { href: '#contact', label: 'お問い合わせ' },
 ];
 

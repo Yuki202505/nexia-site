@@ -2,16 +2,27 @@ import styles from './NexiaFooter.module.css';
 
 const COLS = [
   {
-    title: 'PROGRAMS プログラム',
-    items: ['Foundation 入門', 'Applied 実務', 'Leader 幹部', 'Enterprise 法人'],
+    title: 'SERVICES 事業領域',
+    items: [
+      { label: 'AI研修', href: '#features' },
+      { label: 'ホームページ制作', href: '#services' },
+      { label: 'AIツール開発', href: '#services' },
+      { label: 'AIマーケティング', href: '#services' },
+    ],
   },
   {
     title: 'COMPANY 会社情報',
-    items: ['会社概要', 'チーム', 'ニュース', '採用情報'],
+    items: [
+      { label: '会社概要', href: '#company' },
+      { label: 'お問い合わせ', href: '#contact' },
+    ],
   },
   {
-    title: 'RESOURCES 資料',
-    items: ['導入事例', 'ブログ', 'ホワイトペーパー', '用語集'],
+    title: 'LEGAL 法令表記',
+    items: [
+      { label: 'プライバシーポリシー', href: '/privacy' },
+      { label: '特定商取引法に基づく表記', href: '/legal/commerce' },
+    ],
   },
 ];
 
@@ -36,7 +47,9 @@ export function NexiaFooter() {
               <h4>{col.title}</h4>
               <ul>
                 {col.items.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item.label}>
+                    <a href={item.href}>{item.label}</a>
+                  </li>
                 ))}
               </ul>
             </div>

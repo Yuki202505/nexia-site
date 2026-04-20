@@ -42,7 +42,7 @@ export function Programs() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>02</span>
+            <span className={sec.secTagNum}>03</span>
             <span>Programs</span>
             <span className={sec.jaSub}>プログラム一覧</span>
           </div>

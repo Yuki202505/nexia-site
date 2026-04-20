@@ -95,13 +95,6 @@
   font-family: var(--font-jp);
 }
 
-.body::before {
-  content: '$ output> ';
-  color: var(--color-accent-2);
-  font-family: var(--font-mono);
-  font-size: 12px;
-}
-
 @media (max-width: 960px) {
   .q details summary {
     padding: 18px 18px;

@@ -5,8 +5,7 @@ import styles from './Hero.module.css';
  * 左カラム: eyebrow + h1 + lead + 2 CTA / 右カラム: AI.MARKET ライブパネル。
  */
 
-// TODO(nexia): market-panel の数値（54.7% / 64.4% / 92% / 40-60 min）はリリース前に最新値で再確認。
-// TODO(nexia): data-refresh — 四半期ごとに出典値を更新
+// TODO(nexia): 公開統計。四半期ごとに最新値へ更新すること（出典は下部に併記）。
 const MARKET_ROWS: {
   key: string;
   value: string;
@@ -14,10 +13,10 @@ const MARKET_ROWS: {
   good?: boolean;
 }[] = [
   { key: 'chatgpt_weekly_users', value: '9.0', unit: '億人' },
-  { key: 'jp_personal_usage', value: '54.7%', good: true },
-  { key: 'jp_corp_adoption', value: '64.4%' },
-  { key: 'fortune500_users', value: '92%' },
-  { key: 'time_saved_per_day', value: '40-60 min', good: true },
+  { key: 'gemini_monthly_users', value: '7.5', unit: '億人', good: true },
+  { key: 'claude_monthly_users', value: '2,628', unit: '万人' },
+  { key: 'ai_search_share', value: '60.4%' },
+  { key: 'global_ai_users', value: '10億+', good: true },
 ];
 
 const BAR_COUNT = 12;
@@ -39,7 +38,7 @@ export function Hero() {
               <span className={styles.en}>Engineering Your Workflow With AI</span>
             </h1>
             <p className={styles.lead}>
-              生成AI・エージェント・機械学習を、ビジネスパーソンのための語彙で解体する。基礎から段階的に積み上げ、短期間で・低価格で提供する研修プログラム。
+              生成AI・エージェント・機械学習を、ビジネスパーソンのための語彙で解体する。短期間・業界最安値水準で、実務にすぐ活かせる研修プログラム。
             </p>
             <div className={styles.ctas}>
               <a className={styles.cta} href="#contact">
@@ -53,7 +52,7 @@ export function Hero() {
 
           <aside className={styles.panel}>
             <div className={styles.panelHead}>
-              <span>AI.MARKET ・ 市場データ</span>
+              <span>AI.GLOBAL ・ 世界のAI利用状況</span>
               <span className={styles.live}>LIVE</span>
             </div>
             {MARKET_ROWS.map((row) => (
@@ -76,7 +75,7 @@ export function Hero() {
               ))}
             </div>
             <div className={styles.source}>
-              ※ 出典：OpenAI (2026.02) / ICT総研 / 総務省情報通信白書 / 日経BP調査
+              ※ 出典：OpenAI (2026.02) / Google Gemini (2025末) / Anthropic / DataReportal Digital 2026
             </div>
           </aside>
         </div>
