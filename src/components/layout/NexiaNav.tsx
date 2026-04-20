@@ -14,7 +14,7 @@ export function NexiaNav() {
       <a className={styles.logo} href="#top">
         <span className={styles.mark} aria-hidden="true" />
         <span className={styles.logoText}>
-          NEXIA <span className={styles.logoSub}>AI TRAINING</span>
+          NEXIA
         </span>
       </a>
       <ul className={styles.links}>

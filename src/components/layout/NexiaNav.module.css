@@ -25,10 +25,6 @@
   color: var(--color-ink);
 }
 
-.logoSub {
-  color: var(--color-ink-dim);
-  font-weight: 400;
-}
 
 .mark {
   width: 26px;

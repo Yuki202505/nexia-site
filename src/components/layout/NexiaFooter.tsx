@@ -34,7 +34,7 @@ export function NexiaFooter() {
           <div className={styles.colBrand}>
             <a className={styles.logo} href="#top">
               <span className={styles.mark} aria-hidden="true" />
-              <span>NEXIA AI TRAINING</span>
+              <span>NEXIA</span>
             </a>
             <p className={styles.tagline}>
               AIと人間の協働を設計する、

@@ -28,13 +28,13 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'NEXIA · AI Training',
+  title: 'NEXIA — AI研修・HP制作・AIツール・AIマーケティング',
   description:
-    '生成AI・エージェント・機械学習を、ビジネスパーソンのための語彙で解体する。基礎から段階的に積み上げ、短期間・低価格で提供するAI研修プログラム。',
+    'AI研修・ホームページ制作・AIツール開発・AIマーケティング。AIを道具から同僚にする、NEXIAの4つの事業領域。',
   openGraph: {
-    title: 'NEXIA · AI Training',
+    title: 'NEXIA — AI研修・HP制作・AIツール・AIマーケティング',
     description:
-      'AIを道具から同僚にする。NEXIAの企業向けAI研修プログラム。',
+      'AI研修・ホームページ制作・AIツール開発・AIマーケティング。AIを道具から同僚にする、NEXIAの4つの事業領域。',
     type: 'website',
   },
 };
