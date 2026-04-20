@@ -1,0 +1,87 @@
+.footer {
+  border-top: 1px solid var(--color-line-soft);
+  padding: 48px 0 80px;
+  margin-top: 60px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-ink-dim);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.colBrand {
+  max-width: 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+}
+
+.mark {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  display: inline-block;
+}
+
+.mark::before,
+.mark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-accent);
+}
+
+.mark::after {
+  transform: rotate(45deg);
+}
+
+.tagline {
+  margin-top: 16px;
+  line-height: 1.7;
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+}
+
+.col h4 {
+  color: var(--color-accent);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.col ul li {
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  font-size: 13px;
+}
+
+.footBar {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--color-line-soft);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
