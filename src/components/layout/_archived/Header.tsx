@@ -4,6 +4,13 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { gsap } from '@/lib/gsap-init';
 
+const navLinks = [
+  { href: '#services', label: 'サービス' },
+  { href: '#process', label: '制作の流れ' },
+  { href: '#about', label: '会社概要' },
+  { href: '#faq', label: 'FAQ' },
+];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -51,7 +58,7 @@ export function Header() {
     <>
       {/* プログレスバー */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-[2px] bg-white/40 z-[60] origin-left"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-[#2563EB] z-[60] origin-left"
         style={{ scaleX }}
       />
 
@@ -65,25 +72,20 @@ export function Header() {
           className="w-full"
           animate={{
             backgroundColor: isScrolled
-              ? 'rgba(0,0,0,0.85)'
+              ? 'rgba(255,255,255,0.95)'
               : 'rgba(0,0,0,0)',
             boxShadow: isScrolled
-              ? '0 1px 20px rgba(0,0,0,0.5)'
+              ? '0 1px 3px rgba(0,0,0,0.1)'
               : '0 0 0 rgba(0,0,0,0)',
             backdropFilter: isScrolled ? 'blur(16px)' : 'blur(0px)',
           }}
           transition={{ duration: 0.3 }}
-          style={{
-            borderBottom: isScrolled
-              ? '1px solid rgba(255,255,255,0.06)'
-              : '1px solid transparent',
-          }}
         >
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
             <motion.a
               href="#"
               onClick={(e) => handleAnchorClick(e, '#')}
-              className="text-2xl font-bold text-white"
+              className={`text-2xl font-bold transition-colors ${isScrolled ? 'text-gray-800' : 'text-white'}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -91,15 +93,12 @@ export function Header() {
             </motion.a>
 
             <nav className="hidden items-center gap-8 md:flex">
-              {[
-                { href: '#services', label: 'サービス' },
-                { href: '#about', label: '会社概要' },
-              ].map((link, i) => (
+              {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleAnchorClick(e, link.href)}
-                  className="relative text-sm text-white/50 hover:text-white transition-colors"
+                  className={`relative text-sm transition-colors ${isScrolled ? 'text-gray-500 hover:text-gray-800' : 'text-white/60 hover:text-white'}`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
@@ -107,7 +106,7 @@ export function Header() {
                 >
                   {link.label}
                   <motion.span
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full"
+                    className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${isScrolled ? 'bg-gray-800' : 'bg-white'}`}
                     initial={{ scaleX: 0 }}
                     variants={{ hover: { scaleX: 1 } }}
                     transition={{ duration: 0.3 }}
@@ -118,7 +117,7 @@ export function Header() {
               <motion.a
                 href="#contact"
                 onClick={(e) => handleAnchorClick(e, '#contact')}
-                className="px-6 py-2.5 bg-white text-black rounded-full text-sm font-semibold transition-all hover:shadow-[0_4px_20px_rgba(255,255,255,0.2)]"
+                className="px-6 py-2.5 bg-[#2563EB] text-white rounded-full text-sm font-semibold transition-colors hover:bg-[#1D4ED8]"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.4 }}
@@ -135,13 +134,13 @@ export function Header() {
               aria-label="メニュー"
             >
               <span
-                className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileOpen ? 'translate-y-[8px] rotate-45' : ''}`}
+                className={`h-0.5 w-6 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'} ${isMobileOpen ? 'translate-y-[8px] rotate-45' : ''}`}
               />
               <span
-                className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`}
+                className={`h-0.5 w-6 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'} ${isMobileOpen ? 'opacity-0' : ''}`}
               />
               <span
-                className={`h-0.5 w-6 bg-white transition-all duration-300 ${isMobileOpen ? '-translate-y-[8px] -rotate-45' : ''}`}
+                className={`h-0.5 w-6 transition-all duration-300 ${isScrolled ? 'bg-gray-800' : 'bg-white'} ${isMobileOpen ? '-translate-y-[8px] -rotate-45' : ''}`}
               />
             </button>
           </div>
@@ -150,7 +149,7 @@ export function Header() {
         <AnimatePresence>
           {isMobileOpen && (
             <motion.div
-              className="overflow-hidden border-t border-white/10 bg-[rgba(0,0,0,0.95)] backdrop-blur-xl md:hidden"
+              className={`overflow-hidden border-t md:hidden ${isScrolled ? 'border-gray-200 bg-white/95 backdrop-blur-xl' : 'border-white/10 bg-[rgba(17,24,39,0.95)] backdrop-blur-xl'}`}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -161,15 +160,22 @@ export function Header() {
             >
               <nav className="flex flex-col gap-4 px-6 py-6">
                 {[
-                  { href: '#services', label: 'サービス', accent: false },
-                  { href: '#about', label: '会社概要', accent: false },
+                  ...navLinks.map((l) => ({ ...l, accent: false })),
                   { href: '#contact', label: 'お問い合わせ', accent: true },
                 ].map((link, i) => (
                   <motion.a
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleAnchorClick(e, link.href)}
-                    className={`text-sm transition-colors py-2 ${link.accent ? 'text-white font-semibold' : 'text-white/50 hover:text-white'}`}
+                    className={`text-sm transition-colors py-2 ${
+                      link.accent
+                        ? isScrolled
+                          ? 'text-[#2563EB] font-semibold'
+                          : 'text-white font-semibold'
+                        : isScrolled
+                          ? 'text-gray-500 hover:text-gray-800'
+                          : 'text-white/50 hover:text-white'
+                    }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.08, duration: 0.3 }}
