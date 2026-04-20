@@ -7,6 +7,9 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #8478 | 11:22 PM | 🔄 | About Section Redesigned with Single-Column Layout and Introductory Paragraph | ~934 |
+| #8477 | " | 🔄 | Hero Section Redesigned with Minimal Typography and Accent Color CTA | ~912 |
+| #8445 | 8:52 PM | 🔄 | Site-wide refactor to remove AI-generated appearance and expand service descriptions | ~462 |
 | #8440 | 8:51 PM | ✅ | Contact section copy updated to casual conversational tone | ~275 |
 | #8439 | " | ✅ | Updated contact form service options | ~345 |
 | #8436 | " | ✅ | Hero section messaging refined for broader positioning | ~479 |
