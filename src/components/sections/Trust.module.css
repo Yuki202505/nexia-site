@@ -1,11 +1,11 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   border: 1px solid var(--color-line-soft);
   background:
     linear-gradient(var(--color-line-soft) 1px, transparent 1px) 0 0 / 100% 100%,
-    linear-gradient(90deg, var(--color-line-soft) 1px, transparent 1px) 0 0 / calc(100% / 4) 100%;
+    linear-gradient(90deg, var(--color-line-soft) 1px, transparent 1px) 0 0 / calc(100% / 3) 100%;
 }
 
 .card {
@@ -13,72 +13,71 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  position: relative;
   transition: background 0.2s;
-  min-height: 280px;
 }
 
 .card:hover {
   background: rgba(167, 243, 0, 0.04);
 }
 
-
-.cardHead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 4px;
-}
-
-.cardId {
+.num {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--color-accent);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  line-height: 1;
 }
 
-
-.cardTitle {
+.card h3 {
   font-family: var(--font-jp);
   font-weight: 800;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.3;
   color: var(--color-ink);
-  letter-spacing: -0.01em;
 }
 
-
-.cardTag {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--color-ink-dim);
-  letter-spacing: 0.05em;
-}
-
-.cardBody {
+.card p {
   font-size: 13px;
   line-height: 1.75;
   color: var(--color-ink-dim);
-  flex: 1;
 }
 
-
-.cardCta {
-  display: inline-flex;
+.techBlock {
+  margin-top: 32px;
+  padding: 24px 32px;
+  border: 1px solid var(--color-line-soft);
+  display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 24px;
+}
+
+.techLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-ink-dim);
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techItem {
   font-family: var(--font-mono);
   font-size: 12px;
-  color: var(--color-accent);
-  letter-spacing: 0.08em;
-  border-top: 1px dashed rgba(167, 243, 0, 0.3);
-  padding-top: 14px;
-  margin-top: auto;
-  transition: letter-spacing 0.2s;
+  padding: 6px 14px;
+  border: 1px solid var(--color-line-soft);
+  color: var(--color-ink);
+  letter-spacing: 0.05em;
+  transition: border-color 0.2s;
 }
 
-.cardCta:hover {
-  letter-spacing: 0.12em;
+.techItem:hover {
+  border-color: var(--color-accent);
 }
 
 @media (max-width: 960px) {
@@ -88,14 +87,7 @@
       linear-gradient(var(--color-line-soft) 1px, transparent 1px) 0 0 / 100% 100%,
       linear-gradient(90deg, var(--color-line-soft) 1px, transparent 1px) 0 0 / 50% 100%;
   }
-  .card {
-    min-height: 240px;
-    padding: 24px 20px;
-  }
-  .cardTitle {
-    font-size: 20px;
-  }
-  }
+}
 
 @media (max-width: 640px) {
   .grid {
@@ -107,5 +99,9 @@
   }
   .card:first-child {
     border-top: none;
+  }
+  .techBlock {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

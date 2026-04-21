@@ -8,6 +8,7 @@ const COLS = [
       { label: 'ホームページ制作', href: '#services' },
       { label: 'AIツール開発', href: '#services' },
       { label: 'AIマーケティング', href: '#services' },
+      { label: '導入の流れ', href: '#flow' },
     ],
   },
   {
@@ -22,6 +23,7 @@ const COLS = [
     items: [
       { label: 'プライバシーポリシー', href: '/privacy' },
       { label: '特定商取引法に基づく表記', href: '/legal/commerce' },
+      { label: '利用規約', href: '/legal/terms' },
     ],
   },
 ];
@@ -37,9 +39,9 @@ export function NexiaFooter() {
               <span>NEXIA</span>
             </a>
             <p className={styles.tagline}>
-              AIと人間の協働を設計する、
+              AIの導入から運用まで、
               <br />
-              次世代の企業研修プログラム。
+              研修・開発・マーケを一気通貫で。
             </p>
           </div>
           {COLS.map((col) => (
@@ -57,7 +59,9 @@ export function NexiaFooter() {
         </div>
         <div className={styles.footBar}>
           <span>© {new Date().getFullYear()} NEXIA, INC.</span>
-          <span>PRIVACY · TERMS · SECURITY</span>
+          <span>
+            <a href="/privacy">PRIVACY</a> · <a href="/legal/terms">TERMS</a> · <a href="/legal/commerce">COMMERCE</a>
+          </span>
         </div>
       </div>
     </footer>

@@ -23,46 +23,28 @@ const FEATURES: Cell[] = [
   },
   {
     num: 'F.02',
-    title: '短期間で完了',
-    body: '量を求めずに、最短距離で身につくカリキュラム。研修1日から。',
+    title: '業界最安値水準',
+    body: '研修内容に見合った価格設計。助成金の併用で実質負担を最大75%軽減できるケースがあります。',
     variant: 'circ',
   },
   {
     num: 'F.03',
-    title: '業界最安値水準',
-    body: '研修内容に見合った価格で、質を落とさず提供します。',
+    title: 'AIメンター同伴',
+    body: '受講期間中、AIチャットメンターが24時間即応。加えて人間講師との1on1レビューで理解を深めます。',
     variant: 'diag',
   },
   {
     num: 'F.04',
-    title: 'AIメンター同伴',
-    body: '24/7即応＋人間講師1on1。',
+    title: '業界特化トラック',
+    body: '営業・人事・経理・マーケなど、職種別のAI活用ユースケースをヒアリングし、すぐ使える演習を設計します。',
     variant: 'line',
-  },
-  {
-    num: 'F.05',
-    title: '社内展開キット',
-    body: '修了後、社内勉強会を主催できる教材一式をお渡しします。',
-    variant: 'diag',
     wide: true,
   },
   {
-    num: 'F.06',
-    title: 'セキュアな演習環境',
-    body: 'SSO・監査ログ・閉域VPN。',
-    variant: 'b',
-  },
-  {
-    num: 'F.07',
-    title: '業界特化トラック',
-    body: '職種別ユースケースから逆算。',
-    variant: 'circ',
-  },
-  {
-    num: 'F.08',
+    num: 'F.05',
     title: '助成金申請サポート',
-    body: '人材開発支援助成金対応。',
-    variant: 'line',
+    body: '人材開発支援助成金の対象要件を確認し、提携社労士が申請書類の作成を代行します。',
+    variant: 'b',
   },
 ];
 
@@ -78,14 +60,14 @@ export function Features() {
             <span className={sec.jaSub}>AI研修の特徴</span>
           </div>
           <h2>
-            AIを道具から<span className="accent" style={{ color: 'var(--color-accent)' }}>同僚</span>にするための、
+            仕組みを理解して、
             <br />
-            基礎からの学び方。
+            <span style={{ color: 'var(--color-accent)' }}>実務で使える</span>研修を。
           </h2>
           <div className={sec.metaRight}>
-            基礎を丁寧に、その上で実務へ。
+            基礎を丁寧に積み上げてから、実務に応用する。
             <br />
-            短期間・業界最安値水準で、実務に絞ったカリキュラム。
+            短期間で完了する、実践重視のカリキュラム。
           </div>
         </div>
 

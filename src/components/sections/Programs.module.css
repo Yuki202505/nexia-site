@@ -5,7 +5,7 @@
 
 .row {
   display: grid;
-  grid-template-columns: 80px 1.4fr 1.4fr 160px;
+  grid-template-columns: 80px 1fr;
   gap: 0;
   border-bottom: 1px solid var(--color-line-soft);
   transition: background 0.2s;
@@ -68,20 +68,68 @@
   font-size: 13px;
   color: var(--color-ink-dim);
   line-height: 1.6;
+  margin-top: 6px;
 }
 
-.apply a {
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.topic {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10px;
+  padding: 3px 8px;
+  border: 1px solid var(--color-line-soft);
+  color: var(--color-ink-dim);
+  letter-spacing: 0.05em;
+}
+
+.duration,
+.target {
+  font-size: 13px;
+  color: var(--color-ink-dim);
+  line-height: 1.6;
+  font-family: var(--font-jp);
+}
+
+
+.banner {
+  margin-top: 32px;
+  padding: 24px 32px;
+  border: 1px solid var(--color-line-soft);
+  background: rgba(167, 243, 0, 0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.banner p {
+  font-size: 14px;
+  color: var(--color-ink-dim);
+  line-height: 1.7;
+}
+
+.bannerAccent {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.bannerCta {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 12px;
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
-  padding: 8px 14px;
+  padding: 10px 18px;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
   transition: background 0.2s;
 }
 
-.apply a:hover {
+.bannerCta:hover {
   background: rgba(167, 243, 0, 0.1);
 }
 
@@ -98,5 +146,9 @@
   }
   .head {
     display: none;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
   }
 }

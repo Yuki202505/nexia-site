@@ -7,6 +7,8 @@ const COMPANY_ROWS: Row[] = [
   { k: '法人名', v: '株式会社NEXIA' },
   { k: '所在地', v: '大阪府', sub: '※ 詳細は契約時にご案内' },
   { k: '事業内容', v: 'AI研修 / ホームページ制作 / AIツール開発 / AIマーケティング' },
+  { k: '対応エリア', v: '全国（オンライン・対面いずれも対応）' },
+  { k: '対応プラットフォーム', v: 'ChatGPT / Claude / Gemini / Copilot / Manas' },
 ];
 
 const PRINCIPLES = [
@@ -34,7 +36,7 @@ export function CompanyInfo() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>06</span>
+            <span className={sec.secTagNum}>08</span>
             <span>Company</span>
             <span className={sec.jaSub}>会社概要</span>
           </div>
@@ -73,19 +75,27 @@ export function CompanyInfo() {
             </ul>
           </div>
 
-          <table className={styles.table}>
-            <tbody>
-              {COMPANY_ROWS.map((r) => (
-                <tr key={r.k}>
-                  <th>{r.k}</th>
-                  <td>
-                    <div className={styles.value}>{r.v}</div>
-                    {r.sub && <div className={styles.sub}>{r.sub}</div>}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <div>
+            <table className={styles.table}>
+              <tbody>
+                {COMPANY_ROWS.map((r) => (
+                  <tr key={r.k}>
+                    <th>{r.k}</th>
+                    <td>
+                      <div className={styles.value}>{r.v}</div>
+                      {r.sub && <div className={styles.sub}>{r.sub}</div>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <div className={styles.legalLinks}>
+              <a href="/privacy">プライバシーポリシー →</a>
+              <a href="/legal/commerce">特定商取引法に基づく表記 →</a>
+              <a href="/legal/terms">利用規約 →</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -46,7 +46,7 @@
 
 .links {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   list-style: none;
   font-family: var(--font-mono);
   font-size: 12px;

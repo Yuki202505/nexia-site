@@ -150,6 +150,26 @@
   margin-top: 4px;
 }
 
+.legalLinks {
+  display: flex;
+  gap: 24px;
+  padding: 20px 24px;
+  border-top: 1px dashed var(--color-line-soft);
+  background: rgba(6, 9, 15, 0.6);
+}
+
+.legalLinks a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-ink-dim);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.legalLinks a:hover {
+  color: var(--color-accent);
+}
+
 @media (max-width: 960px) {
   .block {
     grid-template-columns: 1fr;

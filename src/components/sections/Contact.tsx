@@ -4,19 +4,14 @@ import { useState } from 'react';
 import sec from './section.module.css';
 import styles from './Contact.module.css';
 
-// TODO(nexia): OFFICE住所は登記住所へ差し替え必要。
-const INFO = [
-  { k: 'TEL', v: '03-0000-0000', vSub: '平日 10:00-18:00' },
-  { k: 'OFFICE', v: '大阪府', vSub: '（詳細は会社概要）' },
-  { k: 'HOURS', v: 'Mon-Fri', vSub: '10:00-19:00 JST' },
-];
 
 const PROGRAM_OPTIONS = [
   'T.01 / AI基礎ブートキャンプ',
   'T.02 / 業務適用',
   'T.03 / AIリーダーシップ',
-  'T.04 / 全社展開',
-  '相談して決めたい',
+  'T.04 / 全社展開カスタム',
+  'HP制作 / AIツール / AIマーケ',
+  'まずは相談したい',
 ];
 
 export function Contact() {
@@ -28,7 +23,7 @@ export function Contact() {
         <div className={sec.secHead}>
           <div className={sec.secTag}>
             <span>SECTION</span>
-            <span className={sec.secTagNum}>05</span>
+            <span className={sec.secTagNum}>07</span>
             <span>Contact</span>
             <span className={sec.jaSub}>お問い合わせ</span>
           </div>
@@ -52,22 +47,6 @@ export function Contact() {
             <p>
               「何から始めれば」という問いこそ、最初の学習材料です。相談のみ・資料送付のみも歓迎します。
             </p>
-            <div className={styles.infoGrid}>
-              {INFO.map((item) => (
-                <div key={item.k}>
-                  <div className={styles.k}>{item.k}</div>
-                  <div className={styles.v}>
-                    {item.v}
-                    {item.vSub && (
-                      <>
-                        <br />
-                        {item.vSub}
-                      </>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <form

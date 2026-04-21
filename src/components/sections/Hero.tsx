@@ -29,7 +29,7 @@ export function Hero() {
           <div>
             <span className={styles.eyebrow}>
               <span className={styles.dot} aria-hidden="true" />
-              2026 SPRING COHORT · 受付中
+              NEXIA · AI × 実務支援
             </span>
             <h1 className={styles.h1}>
               AIを、<span className={styles.accent}>道具</span>から
@@ -38,14 +38,14 @@ export function Hero() {
               <span className={styles.en}>Engineering Your Workflow With AI</span>
             </h1>
             <p className={styles.lead}>
-              生成AI・エージェント・機械学習を、ビジネスパーソンのための語彙で解体する。短期間・業界最安値水準で、実務にすぐ活かせる研修プログラム。
+              研修でAIを理解し、ツール開発で業務を自動化し、マーケティングで成果を上げ、Webで届ける。AIの導入から運用まで、4つの事業領域で一気通貫に伴走します。
             </p>
             <div className={styles.ctas}>
               <a className={styles.cta} href="#contact">
                 無料相談を予約 →
               </a>
-              <a className={styles.ctaGhost} href="#programs">
-                /programs
+              <a className={styles.ctaGhost} href="#services">
+                4つの事業を見る →
               </a>
             </div>
           </div>

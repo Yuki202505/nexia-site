@@ -6,16 +6,18 @@ type Service = {
   title: string;
   tag: string;
   body: string;
-  primary?: boolean;
+  href?: string;
+  cta?: string;
 };
 
 const SERVICES: Service[] = [
   {
     id: 'S.01',
     title: 'AI研修',
-    tag: '// flagship — 主力事業',
-    body: '生成AIを道具から同僚にするための研修プログラム。基礎から段階的に、短期間・業界最安値水準でご提供します。',
-    primary: true,
+    tag: '// training — 企業向けAI研修',
+    body: '生成AIの仕組みから業務応用まで、基礎を飛ばさず段階的に。最短1日〜、助成金活用で最大75%OFF。AIメンターと人間講師の二重サポートで定着率を高めます。',
+    href: '#features',
+    cta: 'AI研修の詳細 →',
   },
   {
     id: 'S.02',
@@ -49,33 +51,27 @@ export function Services() {
             <span className={sec.jaSub}>事業領域</span>
           </div>
           <h2>
-            4つの事業を柱に、
+            AIの導入から運用まで、
             <br />
-            <span style={{ color: 'var(--color-accent)' }}>AI研修</span>を主軸にご提供します。
+            <span style={{ color: 'var(--color-accent)' }}>4つの領域</span>でご支援します。
           </h2>
           <div className={sec.metaRight}>
-            Web制作・AIツール・AIマーケを内製で抱え、研修後の実装まで一気通貫で伴走できます。
+            研修・Web制作・ツール開発・マーケティング。すべて内製で、一気通貫で伴走できます。
           </div>
         </div>
 
         <div className={styles.grid}>
           {SERVICES.map((s) => (
-            <div
-              key={s.id}
-              className={[styles.card, s.primary ? styles.primary : '']
-                .filter(Boolean)
-                .join(' ')}
-            >
+            <div key={s.id} className={styles.card}>
               <div className={styles.cardHead}>
                 <span className={styles.cardId}>{s.id}</span>
-                {s.primary && <span className={styles.badge}>FLAGSHIP</span>}
               </div>
               <h3 className={styles.cardTitle}>{s.title}</h3>
               <div className={styles.cardTag}>{s.tag}</div>
               <p className={styles.cardBody}>{s.body}</p>
-              {s.primary && (
-                <a className={styles.cardCta} href="#features">
-                  AI研修の詳細 →
+              {s.href && (
+                <a className={styles.cardCta} href={s.href}>
+                  {s.cta}
                 </a>
               )}
             </div>
