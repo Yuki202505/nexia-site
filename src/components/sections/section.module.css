@@ -1,0 +1,92 @@
+/* Shared section layout for the variant-b Data Grid design. */
+
+.block {
+  padding: 72px 0;
+  position: relative;
+}
+
+.block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 9, 15, 0.55);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.secHead {
+  margin-bottom: 44px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  align-items: end;
+}
+
+.secTag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 1px solid var(--color-accent);
+  padding-left: 16px;
+  min-width: 120px;
+}
+
+.secTagNum {
+  color: var(--color-ink);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.jaSub {
+  display: block;
+  font-family: var(--font-jp);
+  font-size: 11px;
+  color: var(--color-ink-dim);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.secHead h2 {
+  font-family: var(--font-jp);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.secHead h2 .accent {
+  color: var(--color-accent);
+}
+
+.metaRight {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-dim);
+  max-width: 260px;
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .secHead {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .metaRight {
+    text-align: left;
+    max-width: none;
+  }
+  .block {
+    padding: 56px 0;
+  }
+}

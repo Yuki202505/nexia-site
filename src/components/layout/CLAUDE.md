@@ -7,5 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #8479 | 11:23 PM | 🔄 | Footer Redesigned with Larger Typography and Generous Spacing | ~733 |
+| #8445 | 8:52 PM | 🔄 | Site-wide refactor to remove AI-generated appearance and expand service descriptions | ~462 |
 | #8444 | 8:51 PM | ✅ | Updated footer tagline messaging | ~299 |
 </claude-mem-context>

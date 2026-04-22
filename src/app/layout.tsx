@@ -1,31 +1,40 @@
 import type { Metadata } from 'next';
-import { Inter, Noto_Sans_JP } from 'next/font/google';
+import { Inter_Tight, JetBrains_Mono, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { SpaceSceneLoader } from '@/components/ui/SpaceSceneLoader';
+import { NexiaNav } from '@/components/layout/NexiaNav';
+import { NexiaFooter } from '@/components/layout/NexiaFooter';
+import { NeuralBackground } from '@/components/layout/NeuralBackground';
+import { ChromeLayers } from '@/components/layout/ChromeLayers';
 
-const inter = Inter({
+const interTight = Inter_Tight({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-inter-tight',
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+  weight: ['400', '500'],
 });
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   variable: '--font-noto-sans-jp',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '700', '900'],
 });
 
 export const metadata: Metadata = {
-  title: 'NEXIA',
+  title: 'NEXIA — AI研修・HP制作・AIツール・AIマーケティング',
   description:
-    'NEXIAはWeb制作・AIツール開発・業務自動化・AI研修を通じて、企業のデジタル化を支援します。',
+    'AI研修・ホームページ制作・AIツール開発・AIマーケティング。AIを道具から同僚にする、NEXIAの4つの事業領域。',
   openGraph: {
-    title: 'NEXIA',
+    title: 'NEXIA — AI研修・HP制作・AIツール・AIマーケティング',
     description:
-      'Web制作・AIツール開発・業務自動化・AI研修。テクノロジーの力で事業課題を解決します。',
+      'AI研修・ホームページ制作・AIツール開発・AIマーケティング。AIを道具から同僚にする、NEXIAの4つの事業領域。',
     type: 'website',
   },
 };
@@ -38,12 +47,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${inter.variable} ${notoSansJP.variable} antialiased`}
+        className={`${interTight.variable} ${jetbrainsMono.variable} ${notoSansJP.variable}`}
       >
-        <SpaceSceneLoader />
-        <Header />
-        <main className="relative z-10">{children}</main>
-        <Footer />
+        <NeuralBackground />
+        <ChromeLayers />
+        <NexiaNav />
+        <main id="top">{children}</main>
+        <NexiaFooter />
       </body>
     </html>
   );

@@ -7,5 +7,7 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #8476 | 11:21 PM | 🔄 | Replaced Color Scheme with Figma Make's Dark Navy and Warm Amber Palette | ~737 |
+| #8445 | 8:52 PM | 🔄 | Site-wide refactor to remove AI-generated appearance and expand service descriptions | ~462 |
 | #8441 | 8:51 PM | ✅ | Pricing section removed from home page | ~401 |
 </claude-mem-context>
