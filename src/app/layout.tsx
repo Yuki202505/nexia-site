@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter_Tight, JetBrains_Mono, Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
 import { NexiaNav } from '@/components/layout/NexiaNav';
 import { NexiaFooter } from '@/components/layout/NexiaFooter';
 import { NeuralBackground } from '@/components/layout/NeuralBackground';
 import { ChromeLayers } from '@/components/layout/ChromeLayers';
+
+const GA_MEASUREMENT_ID = 'G-8BJPSN9NGZ';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -181,6 +184,18 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} ${jetbrainsMono.variable} ${notoSansJP.variable}`}
       >
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <NeuralBackground />
         <ChromeLayers />
         <NexiaNav />
